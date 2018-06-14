@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ChatBotMessage>
+@{
+    ViewData["Title"] = "Deployment Bot";
+}
+
+<h2>Bot</h2>
+
+<body class="landing-page landing-page1">
+    <div class="wrapper">
+        <div class="parallax filter-gradient orange" data-color="blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="parallax-image">
+                            <div id="chatheader" style="width: 400px;height: 40px;border: 1px solid gray;background-color: cadetblue;border-radius: 10px">
+                                <h4 style="margin-top:10px;float:left;padding-left:5px;color:white">Deployment Bot</h4>
+                            </div>
+                            <div id="conversation" style="width: 400px; height: 450px; border: 2px solid gray;background-color: #ffffff; overflow: scroll;object-position:bottom">
+                                <dl>
+                                    @foreach (var ChatMsg in Model)
+                                    {
+                                        if (ChatMsg.MsgType == MessageType.UserMessage)
+                                        {
+                                            <dt class="userRequest">You: @ChatMsg.ChatMessage</dt>
+                                        }
+                                        else
+                                        {
+                                            <dd style="color:darkorange;font-weight:700">Bot: @ChatMsg.ChatMessage</dd>
+                                        }
+                                    }
+                                </dl>
+                            </div>
+                            @{
+                                <script>
+                                    var chatDiv = document.getElementById("conversation");
+                                    chatDiv.scrollTop = chatDiv.scrollHeight;
+                                </script>
+
+                                var htmlAttributes = new Dictionary<string, object>();
+                                htmlAttributes.Add("class", "form-inline");
+                            }
+
+                            @using (Html.BeginForm("ShowChat", "DeploymentBot", FormMethod.Post, htmlAttributes))
+                            {
+                            <div class="form-group">
+                                <input class="form-control" name="userMessage" type="text" placeholder="Enter your chat here" style="float:left;width:400px;z-index:-1;background-color: #ffffff;height:39px" />
+                                <a asp-action="ClearBot" class="btn btn-default" role="button" style="background-color:cadetblue;float:right;margin-top:-39px;color:white">Clear</a>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

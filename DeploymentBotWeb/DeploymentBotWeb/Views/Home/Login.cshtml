@@ -1,0 +1,52 @@
+﻿@model CelebrityModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="row">
+    <div class="col-md-10">
+        <h2>Login</h2>
+        <h3 class="alert-warning">Welcome to the top secret deployment bot. Prove that you are Jeff Bezos to continue.</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <h3 class="input-lg"> Upload your picture</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-9">
+        <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Login">
+            <div class="col-md-3">
+                <input type="file" name="file" />
+            </div>
+            <div class="col-md-3">
+                <input type="submit" value="Login" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (!Model.IsEmpty)
+{
+    <div class="row">
+        <div class="col-md-9">
+            <h2 class="badge">Celebrity Name -  @Model.CelebrityName </h2>
+            <h2 class="badge">Confidence Level -  @Model.Confidence </h2>
+        </div>
+    </div>
+    @if (Model.IsJeff)
+    {
+        <audio style="visibility:hidden" autoplay src="~/resources/jeff.mp3"></audio>
+        <div class="row">
+            <a asp-area="" asp-controller="DeploymentBot" asp-action="Chat" class="navbar-brand">Continue to Deployment Bot</a>
+        </div>
+    }
+    else
+    {
+        <audio style="visibility:hidden" autoplay src="~/resources/notjeff.mp3"></audio>
+        <h3 style="color:orangered">Sorry, couldn't identify you. Cannot login at this time.</h3>
+
+    }
+}

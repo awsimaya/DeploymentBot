@@ -1,0 +1,11 @@
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\bin\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.deps.json
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\bin\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.runtimeconfig.json
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\bin\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.runtimeconfig.dev.json
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\bin\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.dll
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\bin\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.pdb
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\obj\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.csprojAssemblyReference.cache
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\obj\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.csproj.CoreCompileInputs.cache
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\obj\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.AssemblyInfoInputs.cache
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\obj\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.AssemblyInfo.cs
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\obj\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.dll
+D:\Users\ijaganna\source\repos\DeploymentBotLambda\DeploymentBotLambda\obj\Release\netcoreapp2.0\linux-x64\DeploymentBotLambda.pdb

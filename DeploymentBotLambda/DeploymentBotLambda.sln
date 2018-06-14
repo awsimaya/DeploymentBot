@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeploymentBotLambda", "DeploymentBotLambda\DeploymentBotLambda.csproj", "{102F1160-EC54-4C13-9E3C-11831CCD0BE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{102F1160-EC54-4C13-9E3C-11831CCD0BE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102F1160-EC54-4C13-9E3C-11831CCD0BE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102F1160-EC54-4C13-9E3C-11831CCD0BE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102F1160-EC54-4C13-9E3C-11831CCD0BE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09A9C781-3235-4FB8-85E3-2382695F6CC9}
+	EndGlobalSection
+EndGlobal
