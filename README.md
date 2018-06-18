@@ -1,8 +1,3 @@
-
-## Summary:
-
-To streamline the deployment of software, Acme Inc. is looking to build chat bot that will kick-off a software deployment using facial recognition. This new service will need to identify the person asking to start the deployment is authorized to deploy that service. 
-
 ## This application uses the following AWS services:
 
 * [Lex](https://docs.aws.amazon.com/lex/latest/dg/what-is.html)
