@@ -40,9 +40,7 @@ namespace DeploymentBotWeb.Controllers
             {
                 string speechFileName = "notjeff.mp3";
                 string speechText = "Nice try. You're not Jeff, I can't let you in.";
-
-                // full path to file in temp location
-                var filePath = Path.GetTempFileName();
+                
                 AmazonRekognitionClient rekognitionClient = new AmazonRekognitionClient();
 
                 RecognizeCelebritiesRequest recognizeCelebritiesRequest = new RecognizeCelebritiesRequest();
@@ -82,10 +80,7 @@ namespace DeploymentBotWeb.Controllers
                 await speechResponse.AudioStream.CopyToAsync(stream);
                 stream.Close();
             }
-
-            // process uploaded files
-            // Don't rely on or trust the FileName property without validation.
-
+            
             return View("Login", celeb);
         }
 
