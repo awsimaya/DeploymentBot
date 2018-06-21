@@ -31,7 +31,7 @@ namespace DeploymentBotWeb.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(IFormFile file)
         {
-            CelebrityModel celeb = new CelebrityModel() { IsEmpty = true };
+            CelebrityModel celeb = new CelebrityModel();
 
             Directory.Delete(_appEnvironment.WebRootPath + "/resources/", true);
             Directory.CreateDirectory(_appEnvironment.WebRootPath + "/resources/");
@@ -39,7 +39,7 @@ namespace DeploymentBotWeb.Controllers
             if (null != file && file.Length > 0)
             {
                 string speechFileName = "notjeff.mp3";
-                string speechText = "";
+                string speechText = "Nice try. You're not Jeff, I can't let you in.";
 
                 // full path to file in temp location
                 var filePath = Path.GetTempFileName();
@@ -59,7 +59,6 @@ namespace DeploymentBotWeb.Controllers
                 {
                     celeb.CelebrityName = recognizeCelebritiesResponse.CelebrityFaces[0].Name;
                     celeb.Confidence = recognizeCelebritiesResponse.CelebrityFaces[0].MatchConfidence;
-                    celeb.IsEmpty = false;
 
                     if (celeb.CelebrityName == "Jeff Bezos")
                     {
@@ -72,8 +71,6 @@ namespace DeploymentBotWeb.Controllers
                 {
                     celeb.CelebrityName = "Sure, you're popular among your friends. But that doesn't make you a celebrity.";
                     celeb.Confidence = 0;
-                    celeb.IsEmpty = false;
-                    speechText = "Nice try. You're not Jeff, I can't let you in.";
                 }
 
                 AmazonPollyClient pollyclient = new AmazonPollyClient();

@@ -28,7 +28,7 @@
     </div>
 </div>
 
-@if (!Model.IsEmpty)
+@if (Model.CelebrityName != null)
 {
     <div class="row">
         <div class="col-md-9">
@@ -46,7 +46,7 @@
     else
     {
         <audio style="visibility:hidden" autoplay src="~/resources/notjeff.mp3"></audio>
-        <h3 style="color:orangered">Sorry, couldn't identify you. Cannot login at this time.</h3>
+        <h3 style="color:orangered">Unauthorized user. Cannot login at this time.</h3>
 
     }
 }

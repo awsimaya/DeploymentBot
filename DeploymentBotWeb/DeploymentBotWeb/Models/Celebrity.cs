@@ -9,7 +9,6 @@ namespace DeploymentBotWeb.Models
     {
         public string CelebrityName { get; set; }
         public float Confidence { get; set; }
-        public bool IsEmpty { get; set; }
         public bool IsJeff { get; set; }
     }
 }
